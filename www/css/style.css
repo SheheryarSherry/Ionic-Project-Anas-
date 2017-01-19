@@ -1,0 +1,265 @@
+ion-content{
+	background:#aff6fc;
+	}
+	
+.sub-content{
+	width:90%;
+	height:90vh;
+	background:#bababa;
+	margin-left:5%;
+	margin-top:2%;
+}
+
+
+.regsub-content{
+	width:90%;
+	height:115vh;
+	background:#bababa;
+	margin-left:5%;
+	margin-top:2%;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+.logo{
+	
+	margin-top:6%;
+	padding:0;
+	margin:0;
+	margin-left:17%;
+	
+	
+}
+
+
+.ph5
+{
+	text-align:center;
+	font-size:18px;
+	color:#333;
+	
+}
+.buttonss
+{
+	margin-left:5%;
+	background:#Df0F42;
+	width:90% !important; 
+	
+}
+/*Welcome*/
+#top{
+	background:#03C;
+	color:#FFF;
+	width:100%;
+	margin-left:0%;
+	text-align:left;
+}
+.wlogo
+{
+	margin-top:6%;
+	padding:0;
+	margin:0;
+	margin-left:19%;
+}
+.welp{
+	font-size:19px;
+	text-align:center;
+}
+.icon{
+	float:right;
+	margin-right:8%;
+	width:45px;
+	height:45px;
+}
+/*Login*/
+.input{
+	width:70%;
+	margin-left:15%;
+	
+}
+.logbutton{
+	background:#Df0F42;
+	width:30%;
+	height:70px;
+	float:left;
+	margin-left:15%;
+	border-radius:0px !important;
+	font-weight:bold;
+}
+.logregister{
+	background:#Df0F42;
+	float:right;
+	width:37%;
+	margin-right:15%;
+	border-radius:0px !important;
+	font-weight:bold;
+	height:70px;
+	}
+
+/*Register*/
+.reginput{
+	width:95%;
+	margin-left:2.5%;
+	text-decoration:underline;
+	
+}
+.regbutton
+{
+	width:95% !important;
+	margin-left:2.5%;
+	font-weight:bold;
+	
+	
+}
+/*timeings*/
+.tradio
+{float:left;
+margin-left:8%;
+font-size:16px;
+color:#666;
+font-weight:bold;
+
+}
+.tcheck
+{float:left;
+margin-left:8%;
+font-size:16px;
+color:#666;
+font-weight:bold;
+
+}
+.hpweek
+{
+	color:#666;
+	font-weight:lighter;
+	
+}
+.hours{
+	
+	background:#bababa;
+	border-style: solid 9px;
+	width:90% !important;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+    border-bottom-color:#F0F;
+}
+.ticon{
+	float:right;
+	margin-top:0%;
+	margin-right:6%;
+	width:45px;
+	height:45px;
+}
+/*avaiale tutors*/
+.avtlogo{
+	
+	padding-top:2%;
+	padding:0;
+	float:right;
+	height:70px;
+	width:70px;
+	
+	
+}
+.avtsub-content{
+	width:90%;
+	height:30vh;
+	background:#bababa;
+	margin-left:5%;
+	margin-top:2%;
+}
+.avth2
+{
+	color:#396;
+	font-size:22px;
+	font-weight:bold;
+	margin-top:2%;
+	margin-left:4%;
+	padding-top:4%;
+}
+	
+/*complete*/
+	.phh5
+{
+	text-align:center;
+	font-size:22px;
+	font-weight:bold;
+	color:#333;
+	
+}
+	@media only screen and (min-width : 768px) and (max-width : 768px){
+	.sub-content{
+	width:90%;
+	height:88vh;
+	background:#CCC;
+	margin-left:5%;
+	margin-top:5%;
+}
+.ticon{
+	float:right;
+	margin-top:50%;
+	margin-right:6%;
+	width:45px;
+	height:45px;
+}
+.hours{
+	
+	background:#bababa;
+	border-style: solid 9px;
+	width:90% !important;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+    border-bottom-color:#F0F;
+}
+   .logo{
+	margin-top:10% !important;
+	padding:0;
+	margin:0;
+	margin-left:37%;
+	
+	
+}
+.wlogo
+{
+	margin-top:10%!important;
+	padding:0;
+	margin:0;
+	margin-left:37%;
+}
+.icon{
+	float:right;
+	margin-right:30%;
+	width:45px;
+	height:45px;
+}
+	
+}
+
+p#status {
+  display:none;
+    background: lightgreen;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    color: green;
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+}
+p#error {
+    display:none;
+    background: pink;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    color: red;
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+}
+.input-error {
+    border: 2px solid red;
+}

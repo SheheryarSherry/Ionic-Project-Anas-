@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://innovanza.co/najahh">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	 <script src="js/jquery-1.12.4-jquery.min.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+	
+	<script>
+	 $(document).ready(function() {
+    $('#reg-form').submit(function(e){
+      e.preventDefault(); // Prevent Default Submission
+    
+  
+      
+        $.ajax({
+          url: 'http://innovanza.co/najah/signup.php',
+          type: 'POST',
+          data: $(this).serialize() // it will serialize the form data
+		  
+        })
+            .done(function (data) {
+			
+
+              $("#status").fadeIn(600, function () {
+                $("#status").html(data)
+              });
+              $("#status").fadeOut(3000);
+
+            })
+            .fail(function () {
+              $("#error").fadeIn(600, function () {
+                $("#error").html("Not Registered! Try Again");
+			
+              });
+              $("#error").fadeOut(3000);
+            });
+      
+     
+    });
+  });
+
+
+
+
+</script>
+	
+	
+	
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title" id="top">Sign in</h1>
+       
+      </ion-header-bar>
+      <ion-content>
+      <div class="regsub-content">
+      <img src="img/logo.png" class="logo">
+        <div class="list"><form method="post" id="reg-form" autocomplete="off" class="registration-form">
+  <label class="item item-input reginput">
+    <input name="firstname" id="firstname" type="text" placeholder="First Name">
+  </label>
+  <label class="item item-input reginput">
+    <input name="lastname" id="lastname" type="text" placeholder="Last Name">
+  </label>
+  <label class="item item-input reginput">
+    <input name="email" id="email" type="text" placeholder="Email Address">
+  </label>
+  <label class="item item-input reginput">
+    <input name="mobile" id="mobile" type="text" placeholder="Mobile Number">
+  </label>
+  <label class="item item-input reginput">
+    <input name="dob" id="dob" type="text" placeholder="Date Of Birth ">
+  </label>
+  <label class="item item-input reginput">
+    <input name="username" id="username" type="text" placeholder="User Name">
+  </label>
+  <label class="item item-input reginput">
+    <input name="password" id="password" type="password" placeholder="Password">
+  </label>
+  <label class="item item-input reginput">
+    <input type="password" placeholder="Confirm Password">
+  </label>
+   <button class="button button-full button-assertive regbutton">إنشاء حساب</button>
+  <p id="status" class="succes-reg"></p>
+                <p id="error" class="error-login"></p>
+</form>
+  
+</div> 
+        
+       </div>   
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+	
+	<script type="text/javascript">	
+	function getUrlVars()
+	{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+	}
+
+	
+    function ms(){
+	var name = getUrlVars()["name"];
+	var subject=document.getElementById('ms').id;
+	window.location = "middle_subjects.html?name="+name+"&subject="+subject;
+    }
+	function hs(){
+	var name = getUrlVars()["name"];
+	var subject=document.getElementById('hs').id;
+	window.location = "middle_subjects.html?name="+name+"&subject="+subject;
+    }
+	function ie(){
+	var name = getUrlVars()["name"];
+	var subject=document.getElementById('ie').id;
+	window.location = "middle_subjects.html?name="+name+"&subject="+subject;
+    }
+	</script>
+	
+	
+	
+	
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Najahh</h1>
+       
+      </ion-header-bar>
+      <ion-content>
+      <div class="sub-content">
+      <img src="img/logo.png" class="logo">
+    
+     <h5 class="ph5"> المستوى التعليمي</h5>
+ <button id="ms" onclick="ms();" class="button button-full button-assertive buttonss">إعدادي</button>
+   
+<button id="hs" onclick="hs();" class="button button-full button-assertive buttonss">ثانوي</button>
+   
+<button id="ie" onclick="ie();" class="button button-full button-assertive buttonss">IELTS</button>
+
+ 
+       </div>   
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
